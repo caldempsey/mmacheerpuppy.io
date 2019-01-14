@@ -1,1 +1,0 @@
-The cover container is responsible for acting as a container for the body of content displayed on the website.

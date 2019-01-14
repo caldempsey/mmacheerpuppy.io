@@ -1,0 +1,7 @@
+.bg_container {
+    height: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+    /*Since the background container might contain other objects we want to make sure we are inheriting properties.*/
+    display: flex;
+}

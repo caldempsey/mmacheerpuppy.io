@@ -1,21 +1,4 @@
-# mmacheerpuppy.io
-
-The production environment for a more reactive business front coming to a recruitment team near you.
-
-The current goals of the production environment (subject to change per development cycle) are as follows.
-
-Goal  | Achieved
-------------- | -------------
-Development of a view modelling layer written in React mocking current implementation of mmacheerpuppy.io (old username branding)  | ❌
-Evolution of the view model layer to feature a projects page supporting graphing (to be informed by streaming API) | ❌
-Integration of the view model layer with each proposed deployment environment and performance benchmarks, in particular between either Erlang or Node.js cluster execution environment | ❌
-Finalization of backend streaming API delivering data from existing Hadoop services  | ❌
-Integration of backend streaming API delivering data from existing Hadoop services  | ❌
-
-
-# react-dev
-
-Development for the view layer of the web-application. Currently bootstrapped with `create-react-app`. Documentation for `create-react-app` is inserted below for user convenience. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -54,10 +37,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# phx-dev
+## Learn More
 
-Development for the phoenix deployment environment.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-# node-dev
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Development for the node deployment environment.
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

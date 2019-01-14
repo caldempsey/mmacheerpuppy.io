@@ -1,0 +1,13 @@
+
+/*We do not define the flexbox container here (we will move the responsibility of this to the Background Container.
+
+For a great tutorial on flexbox see https://internetingishard.com/html-and-css/flexbox/*/
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: -apple-system, Nexa, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+ 
