@@ -33,6 +33,7 @@ const things = [
   "CSS in JS (don't @ me)"
 ];
 
+// add home icon and more tabs
 export default function HomeView(props) {
   // Intialise localhost.ip to location ip and update on a successful fetch request.
   const [thingsILike, updateThingsILike] = useState(things);
