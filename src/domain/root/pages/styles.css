@@ -10,7 +10,6 @@
 
 section {
   font-size: 1rem;
-  color: #f2f5fd;
   padding-bottom: 1.2rem;
 }
 
@@ -28,7 +27,6 @@ section {
 }
 
 .tab-link {
-  color: #f2f5fd;
   opacity: 0.6;
   transition: 0.3s opacity;
 }
