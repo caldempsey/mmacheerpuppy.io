@@ -20,8 +20,9 @@ export default function SendHostDetails(callback) {
       return res.json();
     })
     .then(data => {
-      console.log(`mmacheerpuppy.io successfully resolved your details as: ${data}`);
-      callback({ ip: data.query, region: data.regionName }); // Send the data to the callback (which might be a state update in React or something)
+      const resolution = { ip: data.query, region: data.regionName };
+      console.log(`mmacheerpuppy.io resolved ${resolution.ip} in ${resolution.region}!`);
+      callback(resolution); // Send the data to the callback (which might be a state update in React or something)
     })
     .catch(err => console.error(err));
 }
