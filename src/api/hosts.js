@@ -23,7 +23,7 @@ export default function getHostDetails(callback) {
       return res.json();
     })
     .then(data => {
-      callback({ ip: data.ip, region: data.regionName });
+      callback({ ip: data.query, region: data.regionName });
     })
     .catch(err => console.error(err));
 }

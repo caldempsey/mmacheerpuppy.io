@@ -47,8 +47,8 @@ export default function HomeView(props) {
   });
   const updateHostDetails = data => {
     // eslint-disable-next-line no-console
-    console.log(`mmacheerpuppy.io resolved ${data.ip} in ${data.regionName}!`);
-    setHostDetails({ ip: data.query, region: data.regionName });
+    console.log(`mmacheerpuppy.io resolved ${data.ip} in ${data.region}!`);
+    setHostDetails({ ip: data.ip, region: data.region });
   };
   useEffect(() => {
     getHostDetails(updateHostDetails);
