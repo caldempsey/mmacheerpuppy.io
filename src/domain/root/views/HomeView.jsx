@@ -46,6 +46,8 @@ export default function HomeView(props) {
     region: 'Canada'
   });
   const updateHostDetails = data => {
+    // eslint-disable-next-line no-console
+    console.log(`mmacheerpuppy.io resolved ${data.ip} in ${data.regionName}!`);
     setHostDetails({ ip: data.query, region: data.regionName });
   };
   useEffect(() => {

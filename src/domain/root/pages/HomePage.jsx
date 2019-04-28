@@ -34,7 +34,7 @@ export default function HomePage(props) {
           </a>
           <a
             role="presentation"
-            className="tab-link clickable"
+            className="tab-link"
             title="Analytics"
             onClick={() => selectView('analytics')}
             onKeyPress={() => selectView('analytics')}
