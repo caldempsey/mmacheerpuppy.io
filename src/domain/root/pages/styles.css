@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+section {
+  font-size: 1rem;
+  color: #f2f5fd;
+  padding-bottom: 1.2rem;
+}
+
 .view {
   min-height: 100%;
   min-width: 100%;
