@@ -5,7 +5,7 @@ import ThingsRotation from '../../common/components/ThingsRotation/ThingsRotatio
 import '../common/css/styles.css';
 import './homeViewStyles.css';
 
-import GetHostDetails from '../../../api/HostInfo/GetHostDetails';
+import getHostDetails from '../../../api/hosts';
 import Flexbox from '../../common/containers/Flexbox';
 
 const things = [
@@ -51,7 +51,7 @@ export default function HomeView(props) {
     setHostDetails({ ip: data.query, region: data.regionName });
   };
   useEffect(() => {
-    GetHostDetails(updateHostDetails);
+    getHostDetails(updateHostDetails);
   }, []);
   useEffect(() => {
     setThingsILike(things.concat([hostDetails.region]));

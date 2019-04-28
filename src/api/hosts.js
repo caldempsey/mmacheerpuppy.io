@@ -1,13 +1,16 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-export default function GetHostDetails(callback) {
-  /**
-   * Fetches strings... 
+
+/* *
+   Passes JSON with keys
   {
     "ip": 127.0.0.1,
     "region": Canada
-    }
-   */
+  }
+  
+  To the respective callback.
+   * */
+export default function getHostDetails(callback) {
   fetch('http://ip-api.com/json')
     .then(res => {
       console.log(res.status);
@@ -20,7 +23,7 @@ export default function GetHostDetails(callback) {
       return res.json();
     })
     .then(data => {
-      callback(data);
+      callback({ ip: data.ip, region: data.regionName });
     })
     .catch(err => console.error(err));
 }

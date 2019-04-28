@@ -41,7 +41,11 @@ export default function HomePage(props) {
           >
             <i className="far fa-lg fa fa-signal" />
           </a>
-          <a className="tab-link" href="https://progdisc.club/" title="Programming Discussions">
+          <a
+            className="tab-link clickable"
+            href="https://progdisc.club/"
+            title="Programming Discussions"
+          >
             <i className="fab fa-lg fa-discord circle" />
           </a>
         </section>
