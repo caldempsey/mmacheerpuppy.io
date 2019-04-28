@@ -28,32 +28,14 @@ section {
   padding-bottom: 1.2rem;
 }
 
-.links {
-  font-size: 1.5rem;
-}
-
-.links > * + * {
-  margin-left: 30px;
-}
-
 .faded {
   opacity: 0.5;
-}
-.social-link {
-  color: #f2f5fd;
-  opacity: 0.6;
-  transition: 0.3s opacity;
-}
-
-.social-link:hover {
-  opacity: 1;
 }
 
 .highlight {
   display: inline-block;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+clickable {
+  cursor: pointer;
 }

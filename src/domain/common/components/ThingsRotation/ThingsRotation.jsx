@@ -5,7 +5,8 @@ export default function ThingsRotation(props) {
   const [selectedThing, selectThing] = useState(0);
   const { things, style, color } = props;
   setTimeout(() => {
-    selectThing((selectedThing + 1) % things.length);
+    // eslint-disable-next-line no-bitwise
+    selectThing((Math.random() * things.length) | 0);
   }, 7500);
   return (
     <span
