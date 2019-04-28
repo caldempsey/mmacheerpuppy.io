@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ThingsRotation from '../../common/components/ThingsRotation/ThingsRotation';
 import Flexbox from '../../common/containers/Flexbox';
 import './styles.css';
+import SendHostDetails from '../../../api/HostInfo/SendHostDetails';
 
-const thingsILike = [
+const things = [
   'data-engineering',
   'cage-fighting',
   'rengar',
@@ -33,12 +34,23 @@ const thingsILike = [
 ];
 
 export default function HomeView(props) {
+  // Intialise localhost.ip to location ip and update on a successful fetch request.
+  const [thingsILike, updateThingsILike] = useState(things);
+  const [hostDetails, updateHostDetails] = useState({
+    ip: String(window.location.hostname)
+      .replace(`${window.location.protocol}`, '')
+      .replace('www.', ''),
+    region: 'Canada'
+  });
+  useEffect(() => {
+    SendHostDetails(updateHostDetails);
+  }, []);
+  useEffect(() => {
+    updateThingsILike(things.concat([hostDetails.region]));
+  }, [hostDetails]);
   return (
     <Flexbox
       style={{
-        height: '100vh',
-        width: '100%',
-        backgroundColor: 'rgb(13,20,33)',
         flexDirection: 'column'
       }}
       className="home"
@@ -46,8 +58,9 @@ export default function HomeView(props) {
       <Flexbox
         style={{
           margin: 'auto',
-          height: '95%',
-          width: '95%',
+          height: '100%',
+          width: '100%',
+          padding: '2.5rem',
           flexDirection: 'column',
           justifyContent: 'flex-end'
         }}
@@ -56,11 +69,7 @@ export default function HomeView(props) {
           <h1>
             hi my name is
             <p /> mmacheerpuppy@
-            <span>
-              {String(window.location.hostname)
-                .replace(`${window.location.protocol}`, '')
-                .replace('www.', '')}
-            </span>
+            <span>{hostDetails.ip}</span>
           </h1>
         </section>
         <section>

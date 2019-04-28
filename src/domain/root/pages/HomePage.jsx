@@ -16,9 +16,7 @@ export default function HomePage() {
         {/** Placeholder div while developing * */}
         <HomeView />
         {/** Placeholder div while developing Dashboard View goes below * */}
-        <div
-          style={{ minHeight: '30%', justifyContent: 'flex-end', backgroundColor: 'rgb(25,25,25)' }}
-        />
+        <div />
       </div>
     </Flexbox>
   );
