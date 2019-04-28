@@ -62,7 +62,10 @@ export default function HomeView(props) {
           width: '100%',
           padding: '2.5rem',
           flexDirection: 'column',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
+          boxSizing: 'border-box',
+          overflow: 'hidden',
+          wordWrap: 'break-word'
         }}
       >
         <section>

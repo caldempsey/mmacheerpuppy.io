@@ -5,7 +5,7 @@ export default function ThingsRotation(props) {
   const [selectedThing, selectThing] = useState(0);
   const { things, style, color } = props;
   setTimeout(() => {
-    selectThing(Math.floor(Math.random() * things.length));
+    selectThing((selectedThing + 1) % things.length);
   }, 7500);
   return (
     <span

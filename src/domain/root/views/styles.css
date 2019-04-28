@@ -2,9 +2,6 @@
   background-color: rgb(13, 20, 33);
   height: 100vh;
   width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  word-wrap: break-word;
 }
 
 .opacityText {
