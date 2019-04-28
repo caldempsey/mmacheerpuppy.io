@@ -27,6 +27,7 @@ section {
 }
 
 .tab-link {
+  color: #f2f5fd;
   opacity: 0.6;
   transition: 0.3s opacity;
 }
