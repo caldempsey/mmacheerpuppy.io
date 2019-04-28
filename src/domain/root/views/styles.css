@@ -4,13 +4,24 @@
   width: 100%;
 }
 
+.title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  word-wrap: break-word;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  color: #aaa;
+}
+
 .opacityText {
   opacity: 0.5;
 }
 
 section {
   font-size: 2rem;
-  margin-bottom: 24px;
   color: #f2f5fd;
   padding-bottom: 1.2rem;
 }

@@ -60,7 +60,7 @@ export default function HomeView(props) {
           margin: 'auto',
           height: '100%',
           width: '100%',
-          padding: '2.5rem',
+          padding: '4rem',
           flexDirection: 'column',
           justifyContent: 'flex-end',
           boxSizing: 'border-box',
@@ -69,14 +69,14 @@ export default function HomeView(props) {
         }}
       >
         <section>
-          <h1>
+          <h1 className="title">
             hi my name is
             <p /> mmacheerpuppy@
             <span>{hostDetails.ip}</span>
           </h1>
         </section>
         <section>
-          <h2>
+          <h2 className="subtitle">
             <span className="faded"> i like&nbsp;</span>
             <ThingsRotation things={thingsILike} />
           </h2>
