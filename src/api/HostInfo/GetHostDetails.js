@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-export default function SendHostDetails(callback) {
+export default function GetHostDetails(callback) {
   /**
    * Fetches strings... 
   {
@@ -20,8 +20,8 @@ export default function SendHostDetails(callback) {
       return res.json();
     })
     .then(data => {
-      const resolution = { ip: data.query, region: data.regionName };
-      console.log(`mmacheerpuppy.io resolved ${resolution.ip} in ${resolution.region}!`);
+      const hostData = { ip: data.query, region: data.regionName };
+      console.log(`mmacheerpuppy.io resolved ${hostData.ip} in ${hostData.region}!`);
       callback(resolution); // Send the data to the callback (which might be a state update in React or something)
     })
     .catch(err => console.error(err));

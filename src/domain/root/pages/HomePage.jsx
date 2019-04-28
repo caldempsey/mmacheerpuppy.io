@@ -32,13 +32,15 @@ export default function HomePage(props) {
           <a className="tab-link" href="https://github.com/mmacheerpuppy" title="GitHub">
             <i className="fab fa-lg fa-github" />
           </a>
-          <div
+          <a
+            role="presentation"
             className="tab-link clickable"
             title="Analytics"
             onClick={() => selectView('analytics')}
+            onKeyPress={() => selectView('analytics')}
           >
             <i className="far fa-lg fa fa-signal" />
-          </div>
+          </a>
           <a className="tab-link" href="https://progdisc.club/" title="Programming Discussions">
             <i className="fab fa-lg fa-discord circle" />
           </a>

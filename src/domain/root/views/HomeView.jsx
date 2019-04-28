@@ -5,7 +5,7 @@ import ThingsRotation from '../../common/components/ThingsRotation/ThingsRotatio
 import '../common/css/styles.css';
 import './homeViewStyles.css';
 
-import SendHostDetails from '../../../api/HostInfo/SendHostDetails';
+import GetHostDetails from '../../../api/HostInfo/GetHostDetails';
 import Flexbox from '../../common/containers/Flexbox';
 
 const things = [
@@ -38,18 +38,21 @@ const things = [
 export default function HomeView(props) {
   const { style } = props;
   // Intialise localhost.ip to location ip and update on a successful fetch request.
-  const [thingsILike, updateThingsILike] = useState(things);
-  const [hostDetails, updateHostDetails] = useState({
+  const [thingsILike, setThingsILike] = useState(things);
+  const [hostDetails, setHostDetails] = useState({
     ip: String(window.location.hostname)
       .replace(`${window.location.protocol}`, '')
       .replace('www.', ''),
     region: 'Canada'
   });
+  const updateHostDetails = data => {
+    setHostDetails({ ip: data.query, region: data.regionName });
+  };
   useEffect(() => {
-    SendHostDetails(updateHostDetails);
+    GetHostDetails(updateHostDetails);
   }, []);
   useEffect(() => {
-    updateThingsILike(things.concat([hostDetails.region]));
+    setThingsILike(things.concat([hostDetails.region]));
   }, [hostDetails]);
   return (
     <Flexbox
