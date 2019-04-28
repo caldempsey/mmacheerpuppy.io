@@ -3,7 +3,10 @@
 import React, { useState, useEffect } from 'react';
 import ThingsRotation from '../../common/components/ThingsRotation/ThingsRotation';
 import '../common/css/styles.css';
+import './homeViewStyles.css';
+
 import SendHostDetails from '../../../api/HostInfo/SendHostDetails';
+import Flexbox from '../../common/containers/Flexbox';
 
 const things = [
   'data-engineering',
@@ -33,6 +36,7 @@ const things = [
 
 // add home icon and more tabs
 export default function HomeView(props) {
+  const { style } = props;
   // Intialise localhost.ip to location ip and update on a successful fetch request.
   const [thingsILike, updateThingsILike] = useState(things);
   const [hostDetails, updateHostDetails] = useState({
@@ -48,7 +52,9 @@ export default function HomeView(props) {
     updateThingsILike(things.concat([hostDetails.region]));
   }, [hostDetails]);
   return (
-    <div>
+    <Flexbox
+      style={{ ...style, height: ' 100%', flexDirection: 'column', justifyContent: 'flex-end' }}
+    >
       <section>
         <h1 className="title">
           hi my name is
@@ -62,6 +68,6 @@ export default function HomeView(props) {
           <ThingsRotation things={thingsILike} />
         </h2>
       </section>
-    </div>
+    </Flexbox>
   );
 }

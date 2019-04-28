@@ -5,8 +5,12 @@ export default function Flexbox(props) {
   // eslint-disable-next-line react/prop-types
   const { children, className, style, id } = props;
   return (
-    <div className={`flexbox ${className}`} id={id} style={{ ...style }}>
+    <flexbox
+      className={` ${className === undefined ? '' : className}`}
+      id={id}
+      style={{ ...style }}
+    >
       {children}
-    </div>
+    </flexbox>
   );
 }

@@ -4,8 +4,7 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
+
   font-family: Fira Sans, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,7 +12,7 @@ body {
 
 #root {
   height: 100%;
-  min-width: 100%;
+  width: 100%;
 }
 
 code {

@@ -4,7 +4,7 @@ import './animations.css';
 export default function ThingsRotation(props) {
   const [selectedThing, selectThing] = useState(0);
   const { things, style, color } = props;
-  setTimeout(() => {
+  setInterval(() => {
     // eslint-disable-next-line no-bitwise
     selectThing((Math.random() * things.length) | 0);
   }, 7500);

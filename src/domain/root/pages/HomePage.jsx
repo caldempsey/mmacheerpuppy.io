@@ -6,18 +6,28 @@ import HomeView from '../views/HomeView';
 
 export default function HomePage(props) {
   const [view, selectView] = useState('home');
+
+  const renderedView = () => {
+    switch (view.toLowerCase()) {
+      case 'home':
+        return <HomeView />;
+      case 'analytics':
+        return <div>Hello World</div>;
+      default:
+        return <HomeView />;
+    }
+  };
+
   return (
     <Flexbox
-      style={{
-        flexDirection: 'column'
-      }}
-      className="home"
+      style={{ flexDirection: 'column', alignItems: 'space-between' }}
+      className="pageContent spaceBlueBackground fillsContainerArea"
     >
-      <Flexbox className="homePageContent">
-        <HomeView />
+      <view>{renderedView()}</view>
+      <tabs>
         <section className="tabs">
           <a className="tab-link" href="data" title="Resume">
-            <i className="fas fa-lg  fa fa-user" />
+            <i className="fas fa-lg fa fa-user" />
           </a>
           <a className="tab-link" href="https://github.com/mmacheerpuppy" title="GitHub">
             <i className="fab fa-lg fa-github" />
@@ -33,7 +43,7 @@ export default function HomePage(props) {
             <i className="fab fa-lg fa-discord circle" />
           </a>
         </section>
-      </Flexbox>
+      </tabs>
     </Flexbox>
   );
 }
