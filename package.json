@@ -11,6 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "aws s3 sync build/ s3://mmacheerpuppy.io",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

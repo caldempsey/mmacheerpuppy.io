@@ -23,7 +23,7 @@ const thingsILike = [
   'react',
   'containers',
   'networking & infrastructure',
-  'hario V60',
+  'hario V60 coffee',
   'elixir',
   'kubernates',
   'teaching programming over discord',
@@ -36,7 +36,7 @@ export default function HomeView(props) {
   return (
     <Flexbox
       style={{
-        height: '100%',
+        height: '100vh',
         width: '100%',
         backgroundColor: 'rgb(13,20,33)',
         flexDirection: 'column'
@@ -48,13 +48,14 @@ export default function HomeView(props) {
           margin: 'auto',
           height: '95%',
           width: '95%',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          justifyContent: 'flex-end'
         }}
       >
-        <section style={{ minHeight: '20%' }} />
         <section>
           <h1>
-            hi i'm mmacheerpuppy@
+            hi my name is
+            <p /> mmacheerpuppy@
             <span>
               {String(window.location.hostname)
                 .replace(`${window.location.protocol}`, '')
@@ -70,13 +71,13 @@ export default function HomeView(props) {
         </section>
         <section className="links">
           <a className="social-link" href="data" title="Resume">
-            <i className="fas fa-lg  fa-user-circle" />
+            <i className="fas fa-lg  fa fa-user" />
           </a>
           <a className="social-link" href="https://github.com/mmacheerpuppy" title="GitHub">
             <i className="fab fa-lg fa-github" />
           </a>
           <a className="social-link" href="data" title="Analytics">
-            <i className="far fa-lg fa-chart-bar circle" />
+            <i className="far fa-lg fa fa-signal" />
           </a>
           <a className="social-link" href="https://progdisc.club/" title="Programming Discussions">
             <i className="fab fa-lg fa-discord circle" />
