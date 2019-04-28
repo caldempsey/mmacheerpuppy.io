@@ -25,6 +25,6 @@ section {
   display: inline-block;
 }
 
-clickable {
+.clickable {
   cursor: pointer;
 }

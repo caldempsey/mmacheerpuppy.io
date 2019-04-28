@@ -23,8 +23,8 @@ export default function HomePage(props) {
       style={{ flexDirection: 'column', alignItems: 'space-between' }}
       className="pageContent spaceBlueBackground fillsContainerArea"
     >
-      <view>{renderedView()}</view>
-      <tabs>
+      <div className="view">{renderedView()}</div>
+      <div>
         <section className="tabs">
           <a className="tab-link" href="data" title="Resume">
             <i className="fas fa-lg fa fa-user" />
@@ -32,18 +32,18 @@ export default function HomePage(props) {
           <a className="tab-link" href="https://github.com/mmacheerpuppy" title="GitHub">
             <i className="fab fa-lg fa-github" />
           </a>
-          <clickable
+          <div
             className="tab-link clickable"
             title="Analytics"
             onClick={() => selectView('analytics')}
           >
             <i className="far fa-lg fa fa-signal" />
-          </clickable>
+          </div>
           <a className="tab-link" href="https://progdisc.club/" title="Programming Discussions">
             <i className="fab fa-lg fa-discord circle" />
           </a>
         </section>
-      </tabs>
+      </div>
     </Flexbox>
   );
 }
