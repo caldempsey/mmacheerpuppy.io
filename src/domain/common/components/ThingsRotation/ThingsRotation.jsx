@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './animations.css';
 
 const bruteForceNewIndex = (arr, currentIndex, lastIndex = currentIndex) => {
@@ -11,9 +11,12 @@ const bruteForceNewIndex = (arr, currentIndex, lastIndex = currentIndex) => {
 export default function ThingsRotation(props) {
   const [selectedThing, selectThing] = useState(0);
   const { things, style, color } = props;
-  setTimeout(() => {
-    selectThing(bruteForceNewIndex(things, selectedThing));
-  }, 7500);
+  useEffect(() => {
+    setTimeout(() => {
+      selectThing(bruteForceNewIndex(things, selectedThing));
+    }, 7500);
+  }, []);
+
   return (
     <span
       key={things[selectedThing]}
