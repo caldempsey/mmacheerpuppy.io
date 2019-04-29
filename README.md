@@ -2,8 +2,6 @@
 
 ![](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiT3M0eXhaVmN3MU8vbW84eTArUUszb3FHdjdQQXkwTndIb1dxRVRJRjVZaGRwUlJtYy9NVmxUUTRzSzhBLzJsUkZEaDRHbG10ZG5CNzZGbDRGblM4WDlJPSIsIml2UGFyYW1ldGVyU3BlYyI6Im1UbnpOdDdWblNXM0x2K0YiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
-The production environment for a more reactive business front coming to a recruitment team near you.
-
 The current goals of the production environment are as follows.
 
 | Goal                                                                                                                                                                                   | Achieved |
