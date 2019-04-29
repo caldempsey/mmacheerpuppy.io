@@ -12,7 +12,7 @@ export default function ThingsRotation(props) {
   const [selectedThing, selectThing] = useState(0);
   const { things, style, color } = props;
   setTimeout(() => {
-    selectThing(bruteForceNewIndex(things, selectThing));
+    selectThing(bruteForceNewIndex(things, selectedThing));
   }, 7500);
   return (
     <span
