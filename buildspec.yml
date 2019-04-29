@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - printenv
+      - npm install
+  build:
+    commands:
+      - npm run test
+      - npm run build
+  post_build:
+    commands:
+      - rm build/static/js/*.map # Sanity check that we have no sourcemaps in s3
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
