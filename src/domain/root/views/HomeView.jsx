@@ -58,21 +58,17 @@ export default function HomeView(props) {
   }, [hostDetails]);
   return (
     <Flexbox
-      style={{ ...style, height: ' 100%', flexDirection: 'column', justifyContent: 'flex-end' }}
+      style={{ ...style, height: '100%', flexDirection: 'column', justifyContent: 'flex-end' }}
     >
-      <section>
-        <h1 className="title">
-          hi my name is
-          <p /> mmacheerpuppy@
-          <span>{hostDetails.ip}</span>
-        </h1>
-      </section>
-      <section>
-        <h2 className="subtitle">
-          <span className="faded"> i like&nbsp;</span>
-          <ThingsRotation things={thingsILike} />
-        </h2>
-      </section>
+      <h1 className="title">
+        hi my name is
+        <p /> mmacheerpuppy@
+        <span>{hostDetails.ip}</span>
+      </h1>
+      <h2 className="subtitle">
+        <span className="faded"> i like&nbsp;</span>
+        <ThingsRotation things={thingsILike} />
+      </h2>
     </Flexbox>
   );
 }
