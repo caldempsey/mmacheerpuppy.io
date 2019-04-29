@@ -15,7 +15,7 @@ export default function ThingsRotation(props) {
     setTimeout(() => {
       selectThing(bruteForceNewIndex(things, selectedThing));
     }, 7500);
-  }, []);
+  });
 
   return (
     <span
